@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Web Moderno - Exercícios Javascript</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body onload="loading()">
+    <div id="load">
+        <div class="d-flex w-100 h-100 container-fluid align-items-center justify-content-center">
+            <div class="d-flex flex-column justify-content-center">
+                <div class="text-center">
+                    <div class="spinner-border text-light" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <h5 class="">Carregando os exercícios, aguarde...</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="container-fluid p-0 sticky-top">
+        <nav class="navbar navbar-dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler position-relative" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img class="img-fluid" src="img/transferir.png" alt=""></a>
+                <div class="espaco"></div>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasWithBackdrop"
+                    aria-labelledby="offcanvasWithBackdropLabel">
+                    <div class="offcanvas-header">
+                        <div class="w-100 d-flex justify-content-center">
+                            <h5 class="text-center" id="offcanvasWithBackdrop">Lista de exercícios</h5>
+                        </div>
+                        <button type="button" class="text-light fs-5 botao" data-bs-dismiss="offcanvas"
+                            aria-label="Close">X</button>
+                    </div>
+                    <div class="offcanvas-body text-center animacao">
+                        <a href="#Ex-1" class="list-group-item list-group-item-action">Exercício 01</a>
+                        <a href="#Ex-2" class="list-group-item list-group-item-action">Exercício 02</a>
+                        <a href="#Ex-3" class="list-group-item list-group-item-action">Exercício 03</a>
+                        <a href="#Ex-4" class="list-group-item list-group-item-action">Exercício 04</a>
+                        <a href="#Ex-5" class="list-group-item list-group-item-action">Exercício 05</a>
+                        <a href="#Ex-6" class="list-group-item list-group-item-action">Exercício 06</a>
+                        <a href="#Ex-7" class="list-group-item list-group-item-action">Exercício 07</a>
+                        <a href="#Ex-8" class="list-group-item list-group-item-action">Exercício 08</a>
+                        <a href="#Ex-9" class="list-group-item list-group-item-action">Exercício 09</a>
+                        <a href="#Ex-10" class="list-group-item list-group-item-action">Exercício 10</a>
+                        <a href="#Ex-11" class="list-group-item list-group-item-action">Exercício 11</a>
+                        <a href="#Ex-12" class="list-group-item list-group-item-action">Exercício 12</a>
+                        <a href="#Ex-13" class="list-group-item list-group-item-action">Exercício 13</a>
+                        <a href="#Ex-14" class="list-group-item list-group-item-action">Exercício 14</a>
+                        <a href="#Ex-15" class="list-group-item list-group-item-action">Exercício 15</a>
+                        <a href="#Ex-16" class="list-group-item list-group-item-action">Exercício 16</a>
+                        <a href="#Ex-17" class="list-group-item list-group-item-action">Exercício 17</a>
+                        <a href="#Ex-18" class="list-group-item list-group-item-action">Exercício 18</a>
+                        <a href="#Ex-19" class="list-group-item list-group-item-action">Exercício 19</a>
+                        <a href="#Ex-20" class="list-group-item list-group-item-action">Exercício 20</a>
+                        <a href="#Ex-21" class="list-group-item list-group-item-action">Exercício 21</a>
+                        <a href="#Ex-22" class="list-group-item list-group-item-action">Exercício 22</a>
+                        <a href="#Ex-23" class="list-group-item list-group-item-action">Exercício 23</a>
+                        <a href="#Ex-24" class="list-group-item list-group-item-action">Exercício 24</a>
+                        <a href="#Ex-25" class="list-group-item list-group-item-action">Exercício 25</a>
+                        <a href="#Ex-26" class="list-group-item list-group-item-action">Exercício 26</a>
+                        <a href="#Ex-27" class="list-group-item list-group-item-action">Exercício 27</a>
+                        <a href="#Ex-28" class="list-group-item list-group-item-action">Exercício 28</a>
+                        <a href="#Ex-29" class="list-group-item list-group-item-action">Exercício 29</a>
+                        <a href="#Ex-30" class="list-group-item list-group-item-action">Exercício 30</a>
+                        <a href="#Ex-31" class="list-group-item list-group-item-action">Exercício 31</a>
+                        <a href="#Ex-32" class="list-group-item list-group-item-action">Exercício 32</a>
+                        <a href="#Ex-33" class="list-group-item list-group-item-action">Exercício 33</a>
+                        <a href="#Ex-34" class="list-group-item list-group-item-action">Exercício 34</a>
+                        <a href="#Ex-35" class="list-group-item list-group-item-action">Exercício 35</a>
+                        <a href="#Ex-36" class="list-group-item list-group-item-action">Exercício 36</a>
+                        <a href="#Ex-37" class="list-group-item list-group-item-action">Exercício 37</a>
+                        <a href="#Ex-38" class="list-group-item list-group-item-action">Exercício 38</a>
+                        <a href="#Ex-39" class="list-group-item list-group-item-action">Exercício 39</a>
+                        <a href="#Ex-40" class="list-group-item list-group-item-action">Exercício 40</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container d-flex flex-column mt-5">
+        <h1 class="text-center mb-5">Curso Web Moderno - Exercícios JavaScript</h1>
+        <div id="Ex-1" class="escala"></div>
+        <div id="Ex1">
+            <span class="text-center fs-5">01) Crie uma função que dado dois valores (passados como parâmetros) mostre
+                no console a soma, subtração,
+                multiplicação e divisão desses valores.
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/698a20ed6766c5b3ce2743887a024094.js"></script>
+        </div>
+        <div id="Ex-2" class="escala"></div>
+        <div id="Ex2">
+            <span class="text-center fs-5">02) Os triângulos podem ser classificados em 3 tipos quanto ao tamanho de
+                seus lados:
+                Equilátero: Os três lados são iguais. Isósceles: Dois lados iguais. Escaleno: Todos os lados são
+                diferentes.
+                Crie uma função que recebe os comprimentos dos três lados de um triângulo e retorne sua classificação
+                quanto
+                ao tamanho de seus lados. (Neste exemplo deve-se abstrair as condições matemáticas de existência de um
+                triângulo).
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/357df6b8089ca06ca68abc7e86038a6f.js"></script>
+        </div>
+        <div id="Ex-3" class="escala"></div>
+        <div id="Ex3">
+            <span class="text-center fs-5">03) Crie uma função que recebe dois parâmetros, base e expoente, e retorne a
+                base elevada ao expoente.
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/0207d87d78994537feb460ca84b8921d.js"></script>
+        </div>
+        <div id="Ex-4" class="escala"></div>
+        <div id="Ex4">
+            <span class="text-center fs-5">04) Crie uma função que irá receber dois valores, o dividendo e o divisor. A
+                função deverá imprimir o resultado
+                e o resto da divisão destes dois valores.
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/52848528b2bd80a09cc6dbfb4e16c434.js"></script>
+        </div>
+        <div id="Ex-5" class="escala"></div>
+        <div id="Ex5">
+            <span class="text-center fs-5">05) Lidar com números em JavaScript pode dar muita dor de cabeça. Você já viu
+                o que acontece quando faz o
+                seguinte comando no console: console.log(0.1 + 0.2); O resultado será: 0.30000000000000004. Outra coisa
+                importante de observar, é o fato que o ponto é utilizado no lugar da vírgula e vice versa. Com isso,
+                vamos fazer
+                um exercício simples para mostrar dinheiro sempre da forma correta. Desenvolva uma função JavaScript
+                para
+                que ela receba um valor como 0.30000000000000004 e retorne R$0,30 (observe a vírgula e o ponto).
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/767f0821a14ed0a7590f12c8279e50a9.js"></script>
+        </div>
+        <div id="Ex-6" class="escala"></div>
+        <div id="Ex6">
+            <span class="text-center fs-5">06) Elabore duas funções que recebem três parâmetros: capital inicial, taxa
+                de juros e tempo de aplicação. A
+                primeira função retornará o montante da aplicação financeira sob o regime de juros simples e a segunda
+                retornará o valor da aplicação sob o regime de juros compostos.
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/600955da5de9fc27058e7c97f212a250.js"></script>
+        </div>
+        <div id="Ex-7" class="escala"></div>
+        <div id="Ex7">
+            <span class="text-center fs-5">07) Uma das vantagens da programação é a automatização de tarefas que não
+                gostamos de realizar. Dito isto,
+                elabore uma função cujo objetivo é resolver a fórmula de Bhaskara. Para isso, sua função deve receber
+                três
+                parâmetros, “ax2”, “bx” e “c”, de tal modo que na equação: 3x² - 5x + 12 os valores seriam
+                respectivamente: 3,
+                -5, 12. Como retorno deve ser passado um vetor que tem 2 valores um para cada possível resultado, mesmo
+                que os resultados sejam iguais. Caso o delta seja negativo, retorne, ao invés do vetor, um string com a
+                frase:
+                “Delta é negativo”.
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/c08d710ec2bb00ba2acc92e6869f6e38.js"></script>
+        </div>
+        <div id="Ex-8" class="escala"></div>
+        <div id="Ex8">
+            <span class="text-center fs-5">08) Pedro joga N jogos de basquete por temporada. Para saber como está ele
+                está progredindo, ele mantém
+                registro de todos os as pontuações feitas por jogo. Após cada jogo ele anota no novo valor e confere se
+                o
+                mesmo é maior ou menor que seu melhor e pior desempenho. Dada uma lista string = “pontuação1 pontuação2
+                pontuação3 etc..”, escreva uma função que ao recebê-la irá comparar os valores um a um e irá retornar um
+                vetor com o número de vezes que ele bateu seu recorde de maior número de pontos e quando fez seu pior
+                jogo. (Número do pior jogo).
+                Obs.: O primeiro jogo não conta como novo recorde do melhor.
+                Exemplo:
+                String: “10 20 20 8 25 3 0 30 1”
+                Retorno: [3, 7] (Significa que ele bateu três vezes seu recorde de melhor pontuação e a pior pontuação
+                aconteceu no sétimo jogo.)
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/5a1b444bd3160e42c7c7081a2901ab1a.js"></script>
+        </div>
+        <div id="Ex-9" class="escala"></div>
+        <div id="Ex9">
+            <span class="text-center fs-5">09) Construa uma função para um sistema de notas de uma instituição que
+                possui a seguinte política de
+                classificação: Todo aluno recebe uma nota de 0 a 100. Alunos com nota abaixo de 40 são reprovados. As
+                notas
+                possuem a seguinte regra de arredondamento: Se a diferença entre a nota e o próximo múltiplo de 5 for
+                menor
+                que 3, arredondar a nota para esse próximo múltiplo de 5. Se a nota for abaixo de 38, não é feito nenhum
+                arredondamento pois esta nota resulta na reprovação do aluno. Por exemplo, a nota 84 será arredondada
+                para
+                85, mas a nota 29 não será arredondada por ser abaixo de 40 e não ser possível arredondamento eficiente,
+                ou
+                seja, que evite a reprovação do aluno. No caso de a nota ser 38, o arredondamento é possível pois
+                atingirá 40
+                e o aluno será aprovado.
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/24e6865aba0e4dc8a22e6d8cd382aff4.js"></script>
+        </div>
+        <div id="Ex-10" class="escala"></div>
+        <div id="Ex10">
+            <span class="text-center fs-5">10) Crie uma função que verifica se um número inteiro passado como parêmetro
+                é divisível por 3 e retorne true
+                ou false.
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/0c2ffc3509e684ecd86583b97c23f2bc.js"></script>
+        </div>
+        <div id="Ex-11" class="escala"></div>
+        <div id="Ex11">
+            <span class="text-center fs-5">11) As regras para o cálculo dos anos bissextos são as seguintes:
+                De 4 em 4 anos é ano bissexto;
+                De 100 em 100 anos não é ano bissexto;
+                De 400 em 400 anos é ano bissexto;
+                Prevalecem as últimas regras sobre as primeiras.
+                Partindo daí elabore uma função que recebe um ano e calcula se ele é ano bissexto, imprimindo no console
+                a
+                mensagem e retornando true ou false.
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/ee18ae491edfa9447c562aa240f8e4fd.js"></script>
+        </div>
+        <div id="Ex-12" class="escala"></div>
+        <div id="Ex12">
+            <span class="text-center fs-5">12) Faça um algoritmo que calcule o fatorial de um número.
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/7ed5ca22bcb23623d405bdc66e909364.js"></script>
+        </div>
+        <div id="Ex-13" class="escala"></div>
+        <div id="Ex13">
+            <span class="text-center fs-5">13) Crie um programa que exibe se um dia é dia útil, fim de semana ou dia
+                inválido dado o número referente ao
+                dia. Considere que domingo é o dia 1 e sábado é o dia 7. Utilize a estrutura Switch.
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/8e5d5290efe8d367101053551ca8ab3c.js"></script>
+        </div>
+        <div id="Ex-14" class="escala"></div>
+        <div id="Ex14">
+            <span class="text-center fs-5">14) Crie uma estrutura condicional switch que receba uma string com o nome de
+                uma fruta e que possua três
+                casos: Caso maçã, retorne no console: “Não vendemos esta fruta aqui”. Caso kiwi, retorne: “Estamos com
+                escassez de kiwis”. Caso melancia, retorne: “Aqui está, são 3 reais o quilo”. Teste com estas três
+                opções .Crie
+                também um default, que retornará uma mensagem de erro no console.
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/c83785774b7cc462e513440f10b1703b.js"></script>
+        </div>
+        <div id="Ex-15" class="escala"></div>
+        <div id="Ex15">
+            <span class="text-center fs-5">15) Um homem decidiu ir à uma revenda comprar um carro. Ele deseja comprar um
+                carro hatch, e a revenda
+                possui, além de carros hatch, sedans, motocicletas e caminhonetes. Utilizando uma estrutura switch, caso
+                o
+                comprador queira o hatch, retorne: “Compra efetuada com sucesso”. Nas outras opções, retorne: “Tem
+                certeza
+                que não prefere este modelo?”. Caso seja especificado um modelo que não está disponível, retorne no
+                console:
+                “Não trabalhamos com este tipo de automóvel aqui”.
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/b8d8b1228a249df49951954b98286010.js"></script>
+        </div>
+        <div id="Ex-16" class="escala"></div>
+        <div id="Ex16">
+            <span class="text-center fs-5">16) Utilizando a estrutura do Switch faça um programa que simule uma
+                calculadora básica. O programa recebe
+                como parâmetros dois valores numéricos e uma string referente à operação e a realize com os valores
+                numéricos na ordem que foram inseridos.</br> Por exemplo: calculadora (2, ‘+’, 3). A função efetuará a
+                soma de 2 e
+                3. Dica: Os sinais das operações são: ‘+’. ‘-’, ‘*’ e ‘/’. Crie um caso default para operações
+                inválidas.
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/66f2e30dc48c2cbdfd7bc3b03a6008c0.js"></script>
+        </div>
+        <div id="Ex-17" class="escala"></div>
+        <div id="Ex17">
+            <span class="text-center fs-5">17) Um funcionário irá receber um aumento de acordo com o seu plano de
+                trabalho, de acordo com a tabela abaixo:
+                <table class="table text-light table-bordered mt-3">
+                    <thead>
+                        <tr>
+                            <th scope="col">Plano</th>
+                            <th scope="col">Aumento</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">A</th>
+                            <td>10%</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">B</th>
+                            <td>15%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                Faça uma função que leia o plano de trabalho e o salário atual de um funcionário e calcula e imprime o
+                seu
+                novo salário. Use a estrutura switch e faça um caso default que indique que o plano é inválido.
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/f7918bf568cb14b58c3b71517883772f.js"></script>
+        </div>
+        <div id="Ex-18" class="escala"></div>
+        <div id="Ex18">
+            <span class="text-center fs-5">18) Faça um programa que leia um número entre 0 e 10, e escreva este número
+                por extenso. Use o comando
+                switch. Crie um case default que escreva ‘Número fora do intervalo.’
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/c0594c562e5fa8d62b82d858d53fdbd7.js"></script>
+        </div>
+        <div id="Ex-19" class="escala"></div>
+        <div id="Ex19">
+            <span class="text-center fs-5">19) O cardápio de uma lanchonete é o seguinte:
+                <table class="table text-light table-bordered mt-3">
+                    <thead>
+                        <tr>
+                            <th scope="col">Código</th>
+                            <th scope="col">Descrição do Produto</th>
+                            <th scope="col">Preço</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">100 </th>
+                            <td>Cachorro Quente</td>
+                            <td>R$ 3,00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">200</th>
+                            <td>Hambúrguer Simples </td>
+                            <td>R$ 4,00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">300</th>
+                            <td>Cheeseburguer</td>
+                            <td>R$ 5,50</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">400</th>
+                            <td>Bauru</td>
+                            <td>R$ 7,50</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">500</th>
+                            <td>Refrigerante</td>
+                            <td>R$ 3,50</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">600</th>
+                            <td>Suco</td>
+                            <td>R$ 2,80</td>
+                        </tr>
+                    </tbody>
+                </table>
+                Implemente uma função que receba como parâmetros o código do item pedido, a quantidade e calcule o valor
+                a ser pago por aquele lanche. Considere que a cada execução somente será calculado um item. Use o
+                comando switch. Crie um caso default para produto não existente.
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/d380e26c222a601e9618cf415cceadb1.js"></script>
+        </div>
+        <div id="Ex-20" class="escala"></div>
+        <div id="Ex20">
+            <span class="text-center fs-5">20) Crie um programa para informar quais e quantas notas são necessárias para
+                entregar o mínimo de cédulas
+                para um determinado valor informado pelo usuário considerando notas de R$ 100, R$ 50, R$ 10 e R$ 5 e R$
+                1.
+                Seu programa deve mostrar apenas as notas utilizadas. Por exemplo, ao solicitar R$18, o programa deve
+                informar apenas a seguinte informação (note que não foram exibidas informações sobre as demais cédulas):
+                1
+                nota(s) de R$ 10. 1 nota(s) de R$ 5. 3 nota(s) de R$ 1.
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/076eb24cfa1d957997409373b4c49b3b.js"></script>
+        </div>
+        <div id="Ex-21" class="escala"></div>
+        <div id="Ex21">
+            <span class="text-center fs-5">21) Criar um programa para identificar o valor a ser pago por um plano de
+                saúde dada a idade do conveniado
+                considerando que todos pagam R$ 100 mais um adicional conforme a seguinte tabela: 1) crianças com menos
+                de 10 anos pagam R$80; 2) conveniados com idade entre 10 e 30 anos pagam R$50; 3) conveniados com
+                idade acima de 30 e até 60 anos pagam R$ 95; e 4) conveniados acima de 60 anos pagam R$130.
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/fe3371bee923cf674940055c13fdcccd.js"></script>
+        </div>
+        <div id="Ex-22" class="escala"></div>
+        <div id="Ex22">
+            <span class="text-center fs-5">22) Criar uma função para calcular o valor a ser pago de anuidade de uma
+                associação. A função recebe como
+                parâmetro um inteiro que representa o mês (1 - janeiro, 2 - fevereiro…) que foi paga e o valor da
+                anuidade. A
+                anuidade deve ser paga no mês de janeiro. Por mês, é cobrado 5% de juros (sob o regime de juros
+                compostos). O retorno deve ser o valor a ser pago para o respectivo mês escolhido.
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/23cf565a54e2d29e4b3767ed37638b44.js"></script>
+        </div>
+        <div id="Ex-23" class="escala"></div>
+        <div id="Ex23">
+            <span class="text-center fs-5">23) Escreva um algoritmo que leia o código de um aluno e suas três notas.
+                Calcule a média ponderada do
+                aluno, considerando que o peso para a maior nota seja 4 e para as duas restantes, 3. Mostre o código do
+                aluno, suas três notas, a média calculada e uma mensagem "APROVADO" se a média for maior ou igual a 5 e
+                "REPROVADO" se a média for menor que 5. Repita a operação até que o código lido seja negativo.
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/68775e393b9d815d9be356b3ad128c55.js"></script>
+        </div>
+        <div id="Ex-24" class="escala"></div>
+        <div id="Ex24">
+            <span class="text-center fs-5">24) Crie um programa que imprima 11 vezes a frase " Hello World!" utilizando
+                uma estrutura de repetição while.
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/0bfb7e232ace54f4238feb7a9b669903.js"></script>
+        </div>
+        <div id="Ex-25" class="escala"></div>
+        <div id="Ex25">
+            <span class="text-center fs-5">25) Escrever um programa para exibir os números de 1 até 50 na tela.
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/1a44510ce1bb9b1fb3ab23a1637c3143.js"></script>
+        </div>
+        <div id="Ex-26" class="escala"></div>
+        <div id="Ex26">
+            <span class="text-center fs-5">26) Fazer um programa para encontrar todos os pares entre 1 e 100.
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/9932efb1b4f27bfdb7feeec1276595b9.js"></script>
+        </div>
+        <div id="Ex-27" class="escala"></div>
+        <div id="Ex27">
+            <span class="text-center fs-5">27) Construa uma função que receba como parâmetros as alturas e as taxas de
+                crescimento anuais de duas
+                crianças e calcule se existe uma criança menor, caso exista se a criança menor ultrapassará a maior e em
+                quantos anos isso acontecerá. Utilize centímetros para as unidades de medida.exibidas informações sobre
+                as demais cédulas): 1
+                nota(s) de R$ 10. 1 nota(s) de R$ 5. 3 nota(s) de R$ 1.
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/d264a4493b6f596102e4e0f2bdc71c3c.js"></script>
+        </div>
+        <div id="Ex-28" class="escala"></div>
+        <div id="Ex28">
+            <span class="text-center fs-5">28) Ler um vetor de números inteiros e imprimir quantos são pares e quantos
+                são ímpares.
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/f2b24a32d3bdbd2febb43f14cf7fa822.js"></script>
+        </div>
+        <div id="Ex-29" class="escala"></div>
+        <div id="Ex29">
+            <span class="text-center fs-5">29) Utilizando a estrutura de repetição for, faça uma função que percorra um
+                vetor e conte quantos números
+                deste vetor estão no intervalo [10,20] (repare que o intervalo é fechado, ou seja, inclui o 10 e o 20) e
+                quantos
+                deles estão fora do intervalo, escrevendo estas informações.
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/75138a5be9c8a9bb0cfa7dd48aa1ea57.js"></script>
+        </div>
+        <div id="Ex-30" class="escala"></div>
+        <div id="Ex30">
+            <span class="text-center fs-5">30) Escreva um algoritmo que percorre um vetor de inteiros e defina o maior e
+                menor valor dentro do vetor.
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/b45cff33e1de8d011ac72d4ff86887b6.js"></script>
+        </div>
+        <div id="Ex-31" class="escala"></div>
+        <div id="Ex31">
+            <span class="text-center fs-5">31) Escrever um algoritmo que percorre um vetor de inteiros, conta quantos
+                números negativos há nesse vetor
+                e imprime a quantidade no console.
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/b3a33dacc5ab93a8c16236a0770f41c7.js"></script>
+        </div>
+        <div id="Ex-32" class="escala"></div>
+        <div id="Ex32">
+            <span class="text-center fs-5">32) Construir um algoritmo que calcule a média aritmética dos valores de um
+                vetor de inteiros.
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/f29933768f4590a6a0642da01b5b55e8.js"></script>
+        </div>
+        <div id="Ex-33" class="escala"></div>
+        <div id="Ex33">
+            <span class="text-center fs-5">33) Crie três vetores, chamados vetorInteiro, vetorString e vetorDouble. Cada
+                um destes vetores deverá conter
+                quatro valores, sendo o primeiro com valores inteiros, o segundo com strings e o terceiro com valores
+                decimais.
+                Declarados os vetores, utilize a função de união concat() de duas maneiras diferentes para unir os
+                vetores, e
+                mostre o resultado no console. Todos os elementos do vetor resultado deverão aparecer no console.
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/68e35a4d4be54631d1aaa378af0fb118.js"></script>
+        </div>
+        <div id="Ex-34" class="escala"></div>
+        <div id="Ex34">
+            <span class="text-center fs-5">34) Construa uma função que receberá duas Strings de tamanhos variados e que
+                retornará True ou False caso
+                todos os caracteres (independentemente de ser maiúsculo ou minúsculo) estejam contidos em ambas
+                palavras.
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/525ffa4c474a3c34cbdefe0ebf156cbc.js"></script>
+        </div>
+        <div id="Ex-35" class="escala"></div>
+        <div id="Ex35">
+            <span class="text-center fs-5">35) Crie dois vetores chamados vetorPilha e vetorAdiciona. Inicialmente, o
+                vetorPilha conterá cinco elementos
+                inteiros: [1, 2, 3, 4, 5]. Você deverá adicionar os valores contidos no vetorAdiciona [6, 7, 8, 9, 10]
+                ao vetor pilha
+                e mostrá-los no console. É importante lembrar que o método Push retorna somente o tamanho do Vetor. Ao
+                final das operações imprima os vetores no console.
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/5dbd0e416e8dfd36dd1d7edbd37d23dd.js"></script>
+        </div>
+        <div id="Ex-36" class="escala"></div>
+        <div id="Ex36">
+            <span class="text-center fs-5">36) Crie duas funções que recebem dois parâmetros, um vetor com apenas
+                valores numéricos e um número
+                inteiro. Faça com que a primeira função retorne outro vetor que será resultado da multiplicação de cada
+                elemento pelo número passado como parâmetro. A segunda função fará o mesmo da primeira se e somente se
+                o valor do elemento for maior que 5.
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/a40527041a6fe4f1b6fd4dfaf5f7b813.js"></script>
+        </div>
+        <div id="Ex-37" class="escala"></div>
+        <div id="Ex37">
+            <span class="text-center fs-5">37) Escreva duas funções, uma para progressão aritmética e uma para
+                progressão geométrica que recebam
+                como parâmetros um número n (número de termo), a1 (o primeiro termo) e r (a razão) e escreva os n termos
+                ,
+                bem como a soma dos elementos.
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/163f179cf2625900bb20a4a0c2bd261e.js"></script>
+        </div>
+        <div id="Ex-38" class="escala"></div>
+        <div id="Ex38">
+            <span class="text-center fs-5">38) Escreva uma função que receba dois parâmetros início e fim. Essa função
+                deve imprimir todos os números
+                ímpares que estão entre esses valores. Por padrão os valores devem ser 0 para início e 100 para fim.
+                Atente
+                para corrigir a ordem dos parâmetros caso a função receba o valor maior antes do menor.
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/8a8f713e3516c29d21dedafd8ca7297f.js"></script>
+        </div>
+        <div id="Ex-39" class="escala"></div>
+        <div id="Ex39">
+            <span class="text-center fs-5">39) Crie uma função que receba dois vetores de igual tamanho e troque seus
+                elementos de modo que o
+                primeiro elemento do vetorA passe a ser o primeiro elemento do vetorB e vice versa e assim
+                sucessivamente.
+                Faça a troca sem utilizar uma variável auxiliar.
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/d14840e9d23f2a868d2c1c8612dbf6a0.js"></script>
+        </div>
+        <div id="Ex-40" class="escala"></div>
+        <div id="Ex40">
+            <span class="text-center fs-5">40) Faça uma função que receba como parâmetro um vetor de notas e mostre os
+                conceitos de cada uma de
+                modo que de 0,0 a 4,9 seja atribuído o conceito D, de 5,0 a 6,9 seja atribuído o conceito C, de 7,0 a
+                8,9 o
+                conceito B e de 9,0 a 10,0 o conceito A
+            </span>
+            <script src="https://gist.github.com/BrunoSapalacio/53427dd37dee94265e860c3c2b358a21.js"></script>
+        </div>
+    </div>
+    <div class="bottomFixed p-3 animacao">
+        <button id="top" class="float-end p-3 rounded-circle bottomTop">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M5.47 14.53a.75.75 0 0 1 0-1.06l6-6a.75.75 0 0 1 1.06 0l6 6a.75.75 0 1 1-1.06 1.06L12 9.06l-5.47 5.47a.75.75 0 0 1-1.06 0Z"
+                    fill="#FFFFFF" />
+            </svg>
+        </button>
+    </div>
+    </div>
+    <footer>
+        <h5 class="text-center mb-5">Powered by 
+            <a class="link-light text-decoration-none fst-italic" href="https://github.com/BrunoSapalacio">Bruno Sapalacio</a>
+        </h5>
+    </footer>
+</body>
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script src="./js/script.js"></script>
+</html>
