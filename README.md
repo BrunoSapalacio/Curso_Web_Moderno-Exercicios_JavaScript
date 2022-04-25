@@ -18,7 +18,7 @@ Criei o site One Page para responder a lista de exercícios sobre Fundamentos, E
 
 1 - Clone o diretório.
 ```shell
-git clone https://github.com/BrunoSapalacio/ExerciciosJS.git
+git clone https://github.com/BrunoSapalacio/Curso_Web_Moderno-Exercicios_JavaScript.git
 ```
 2 - Inicialize o Visual Studio Code.
 
